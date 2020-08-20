@@ -55,7 +55,7 @@ func runGenerate() error {
 	ck := "APP_KEY"
 	cv := regexp.QuoteMeta(os.Getenv(ck))
 
-	// Replace the application from env file.
+	// Replace the application key from env file.
 	r, err := regexp.Compile(ck + "=" + cv)
 	if err != nil {
 		return err
