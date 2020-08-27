@@ -2,8 +2,7 @@
 
 [![GoDoc Reference](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/h4ckedneko/kagi?tab=doc)
 [![Latest Version](https://img.shields.io/github/v/release/h4ckedneko/kagi?label=latest)](https://github.com/h4ckedneko/kagi/releases)
-[![License Name](https://img.shields.io/github/license/h4ckedneko/kagi?color=yellow)](https://github.com/h4ckedneko/kagi/blob/master/LICENSE)
-[![Current Maintainer](https://img.shields.io/badge/maintainer-h4ckedneko-yellow)](https://github.com/h4ckedneko)
+[![License Name](https://img.shields.io/github/license/h4ckedneko/kagi?color=blue)](https://github.com/h4ckedneko/kagi/blob/master/LICENSE)
 [![Build Status](https://img.shields.io/github/workflow/status/h4ckedneko/kagi/Testing)](https://github.com/h4ckedneko/kagi/actions?query=workflow:Testing)
 [![Coverage Status](https://gocover.io/_badge/github.com/h4ckedneko/kagi)](https://gocover.io/github.com/h4ckedneko/kagi)
 [![Report Card Status](https://goreportcard.com/badge/github.com/h4ckedneko/kagi)](https://goreportcard.com/report/github.com/h4ckedneko/kagi)
