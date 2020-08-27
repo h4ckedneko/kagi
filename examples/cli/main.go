@@ -4,7 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"log"
 	"os"
 	"regexp"
 
@@ -25,13 +24,15 @@ func main() {
 	flag.Parse()
 
 	if err := dotenv.Load(env); err != nil {
-		log.Fatalln(err)
+		fmt.Println(err)
+		os.Exit(1)
 	}
 
 	var err error
 	defer func() {
 		if err != nil {
-			log.Fatalln(err)
+			fmt.Println(err)
+			os.Exit(1)
 		}
 	}()
 
@@ -41,7 +42,7 @@ func main() {
 	case "decode":
 		err = runDecode()
 	default:
-		err = fmt.Errorf("unknown command")
+		flag.Usage()
 	}
 }
 

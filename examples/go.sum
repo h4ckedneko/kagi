@@ -1,4 +1,4 @@
-github.com/h4ckedneko/kagi v0.0.0-20200820150657-27e7b3c5e8d4 h1:vMCsPZZB4UKgAc9mGvXwwh3uPH8FQUd6iQYZ8WU4Eys=
-github.com/h4ckedneko/kagi v0.0.0-20200820150657-27e7b3c5e8d4/go.mod h1:ZNTOdbAHBxZMYBlaB581bEr+u+NAJ7v4FB8hnX2KriU=
+github.com/h4ckedneko/kagi v1.0.0 h1:2UVOKPlZOvcK68afWkIGkMEBGqf6vKB/Yc95Kper/qg=
+github.com/h4ckedneko/kagi v1.0.0/go.mod h1:ZNTOdbAHBxZMYBlaB581bEr+u+NAJ7v4FB8hnX2KriU=
 github.com/joho/godotenv v1.3.0 h1:Zjp+RcGpHhGlrMbJzXTrZZPrWj+1vfm90La1wgB6Bhc=
 github.com/joho/godotenv v1.3.0/go.mod h1:7hK45KPybAkOC6peb+G5yklZfMxEjkZhHbwpqxOKXbg=
