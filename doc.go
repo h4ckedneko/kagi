@@ -4,7 +4,7 @@
 // production, while allowing the developers to use hardcoded key
 // that can be shared for the whole team during development.
 //
-// Example:
+// Here is a basic example for this package:
 //
 // 	package main
 //

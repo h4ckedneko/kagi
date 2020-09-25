@@ -1,6 +1,6 @@
 module examples
 
-go 1.14
+go 1.11
 
 require (
 	github.com/h4ckedneko/kagi v1.0.0
