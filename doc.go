@@ -1,6 +1,6 @@
-// Package kagi is a simple utility to manage application keys in Go.
+// Package kagi is a simple Go utility for managing application keys.
 //
-// It enables the application to generate and use a secure key for
+// It enables the application to generate and use a secure key on
 // production, while allowing the developers to use hardcoded key
 // that can be shared for the whole team during development.
 //

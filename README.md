@@ -1,17 +1,17 @@
 # kagi (かぎ)
 
-[![GoDoc Reference](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/h4ckedneko/kagi?tab=doc)
+[![Godoc Reference](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/h4ckedneko/kagi)
 [![Latest Version](https://img.shields.io/github/v/release/h4ckedneko/kagi?label=latest)](https://github.com/h4ckedneko/kagi/releases)
 [![License Name](https://img.shields.io/github/license/h4ckedneko/kagi?color=blue)](https://github.com/h4ckedneko/kagi/blob/master/LICENSE)
 [![Build Status](https://img.shields.io/github/workflow/status/h4ckedneko/kagi/Testing)](https://github.com/h4ckedneko/kagi/actions?query=workflow:Testing)
 [![Coverage Status](https://gocover.io/_badge/github.com/h4ckedneko/kagi)](https://gocover.io/github.com/h4ckedneko/kagi)
-[![Report Card Status](https://goreportcard.com/badge/github.com/h4ckedneko/kagi)](https://goreportcard.com/report/github.com/h4ckedneko/kagi)
+[![Go Report Card Status](https://goreportcard.com/badge/github.com/h4ckedneko/kagi)](https://goreportcard.com/report/github.com/h4ckedneko/kagi)
 
-Package kagi is a simple utility to manage application keys in Go. It enables the application to generate and use a secure key for production, while allowing the developers to use hardcoded key that can be shared for the whole team during development.
+Package kagi is a simple Go utility for managing application keys. It enables the application to generate and use a secure key on production, while allowing the developers to use hardcoded key that can be shared for the whole team during development.
 
 **Features and benefits:**
 
--   Minimal API, it only has two functions.
+-   Minimal API, it has only two functions.
 -   Generates cryptographically secure keys.
 -   Supports either generated or hardcoded keys.
 -   No imported external dependencies.

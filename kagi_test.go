@@ -1,22 +1,19 @@
 package kagi_test
 
 import (
-	"bytes"
 	"encoding/base64"
 	"testing"
 
 	"github.com/h4ckedneko/kagi"
+	"github.com/stretchr/testify/assert"
 )
 
 func testKeys(t *testing.T, keys []string, size int) {
-	for i, k := range keys {
-		s := len(kagi.Decode(k))
-		if s != size {
-			t.Errorf("length should be %d not %d", size, s)
-		}
-		for i2, k2 := range keys {
-			if i != i2 && k == k2 {
-				t.Errorf("not unique: %d:%q and %d:%q", i, k, i2, k2)
+	for i1, key1 := range keys {
+		assert.Equal(t, size, len(kagi.Decode(key1)))
+		for i2, key2 := range keys {
+			if i1 != i2 {
+				assert.NotEqual(t, key1, key2)
 			}
 		}
 	}
@@ -57,17 +54,13 @@ func TestNew64(t *testing.T) {
 func TestDecodeGenerated(t *testing.T) {
 	key := []byte{'a', 'b', 'c', '1', '2', '3'}
 	keyd := kagi.Decode("base64:" + base64.RawStdEncoding.EncodeToString(key))
-	if !bytes.Equal(key, keyd) {
-		t.Errorf("expected %q but got %q", key, keyd)
-	}
+	assert.Equal(t, key, keyd)
 }
 
 func TestDecodeHardcoded(t *testing.T) {
 	key := []byte{'a', 'b', 'c', '1', '2', '3'}
 	keyd := kagi.Decode(string(key))
-	if !bytes.Equal(key, keyd) {
-		t.Errorf("expected %q but got %q", key, keyd)
-	}
+	assert.Equal(t, key, keyd)
 }
 
 func BenchmarkNew8(b *testing.B) {

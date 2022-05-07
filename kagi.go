@@ -44,9 +44,15 @@ func Decode(key string) []byte {
 	if len(key) < n || key[:n] != keyPrefix {
 		return []byte(key)
 	}
+
 	b, err := base64.RawStdEncoding.DecodeString(key[n:])
 	if err != nil {
 		panic(err)
 	}
 	return b
+}
+
+// DecodeString is like Decode, but it returns the key as string.
+func DecodeString(key string) string {
+	return string(Decode(key))
 }
