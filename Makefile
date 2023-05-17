@@ -1,7 +1,7 @@
 .PHONY: test bench format
 
 test:
-	@ go test -v
+	@ go test -v -race
 
 bench:
 	@ go test -bench=. -benchmem
