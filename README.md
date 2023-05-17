@@ -3,8 +3,8 @@
 [![Godoc Reference](https://img.shields.io/badge/godoc-reference-blue)](https://pkg.go.dev/github.com/h4ckedneko/kagi)
 [![Latest Version](https://img.shields.io/github/v/release/h4ckedneko/kagi?label=latest)](https://github.com/h4ckedneko/kagi/releases)
 [![License Name](https://img.shields.io/github/license/h4ckedneko/kagi?color=blue)](https://github.com/h4ckedneko/kagi/blob/master/LICENSE)
-[![Build Status](https://img.shields.io/github/workflow/status/h4ckedneko/kagi/Testing)](https://github.com/h4ckedneko/kagi/actions?query=workflow:Testing)
-[![Coverage Status](https://gocover.io/_badge/github.com/h4ckedneko/kagi)](https://gocover.io/github.com/h4ckedneko/kagi)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/h4ckedneko/kagi/testing.yml)](https://github.com/h4ckedneko/kagi/actions?query=workflow:Testing)
+[![Coverage Status](https://img.shields.io/codecov/c/github/h4ckedneko/kagi)](https://app.codecov.io/gh/h4ckedneko/kagi)
 [![Go Report Card Status](https://goreportcard.com/badge/github.com/h4ckedneko/kagi)](https://goreportcard.com/report/github.com/h4ckedneko/kagi)
 
 Package kagi is a simple Go utility for managing application keys. It enables the application to generate and use a secure key on production, while allowing the developers to use hardcoded key that can be shared for the whole team during development.
@@ -66,12 +66,20 @@ See [examples](https://github.com/h4ckedneko/kagi/tree/master/examples) for more
 You can run benchmarks by yourself using `make bench` command.
 
 ```
-BenchmarkNew8-2                  1003131              1168 ns/op              72 B/op          4 allocs/op
-BenchmarkNew16-2                 1033360              1193 ns/op             112 B/op          4 allocs/op
-BenchmarkNew32-2                  972768              1323 ns/op             192 B/op          4 allocs/op
-BenchmarkNew64-2                  627580              1802 ns/op             352 B/op          4 allocs/op
-BenchmarkDecodeGenerated-2       8482894               124 ns/op               8 B/op          1 allocs/op
-BenchmarkDecodeHardcoded-2      17643516              63.0 ns/op               8 B/op          1 allocs/op
+goos: linux
+goarch: amd64
+pkg: github.com/h4ckedneko/kagi
+cpu: AMD Ryzen 5 5600G with Radeon Graphics
+BenchmarkNew8-12                         3424884                374.7 ns/op           64 B/op          4 allocs/op
+BenchmarkNew16-12                        3072880                406.5 ns/op           96 B/op          4 allocs/op
+BenchmarkNew32-12                        2774564                459.2 ns/op          192 B/op          4 allocs/op
+BenchmarkNew64-12                        1826727                648.1 ns/op          352 B/op          4 allocs/op
+BenchmarkDecodeGenerated-12             33482005                33.15 ns/op            8 B/op          1 allocs/op
+BenchmarkDecodeHardcoded-12             63619456                20.19 ns/op            8 B/op          1 allocs/op
+BenchmarkDecodeStringGenerated-12       31331952                39.12 ns/op            8 B/op          1 allocs/op
+BenchmarkDecodeStringHardcoded-12       50978620                26.69 ns/op            8 B/op          1 allocs/op
+PASS
+ok      github.com/h4ckedneko/kagi      11.968s
 ```
 
 ## License
