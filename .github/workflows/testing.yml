@@ -30,6 +30,8 @@ jobs:
           - 1.16.x
           - 1.17.x
           - 1.18.x
+          - 1.19.x
+          - 1.20.x
     steps:
       - name: Set up environment
         uses: actions/setup-go@v3
